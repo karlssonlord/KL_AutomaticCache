@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <KL_AutomaticCache>
+            <version>0.0.1</version>
+        </KL_AutomaticCache>
+    </modules>
+    <global>
+        <models>
+            <kl_automaticcache>
+                <class>KL_AutomaticCache_Model</class>
+                <resourceModel>catalog_mysql4</resourceModel>
+            </kl_automaticcache>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <automatic_cache>
+                <schedule>
+                    <!-- Mon thru Fri, every day of the month of every month at 8am to 5pm 0 minutes past the hour. -->
+                    <cron_expr>0 8-17 * * 1-5</cron_expr>
+                </schedule>
+                <schedule>
+                    <config_path>crontab/jobs/automatic_cache/schedule/cron_expr</config_path>
+                </schedule>
+                <run>
+                    <model>kl_automaticcache/cron::run</model>
+                </run>
+            </automatic_cache>
+        </jobs>
+    </crontab>
+</config>

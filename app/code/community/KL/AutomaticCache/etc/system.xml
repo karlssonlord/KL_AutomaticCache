@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<config>
+    <tabs>
+        <kl translate="label" module="core">
+            <label>KL Extentions</label>
+            <sort_order>200</sort_order>
+        </kl>
+    </tabs>
+    <sections>
+        <kl_automaticcache translate="label" module="core">
+            <label>AutomaticCache</label>
+            <tab>kl</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>700</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <days translate="label">
+                            <label>Days</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>kl_automaticcache/source_days</source_model>
+                            <backend_model>kl_automaticcache/backend_days</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </days>
+                        <time translate="label">
+                            <label>Time</label>
+                            <frontend_type>time</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </time>
+                        <tags translate="label">
+                            <label>Tags</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Comma separated list]]></comment>
+                        </tags>
+                    </fields>
+                </settings>
+            </groups>
+        </kl_automaticcache>
+    </sections>
+</config>
